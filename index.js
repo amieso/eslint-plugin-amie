@@ -10,6 +10,8 @@ module.exports = {
             if (node.properties.length) {
               node.properties.forEach((property) => {
                 if (
+                  property.key &&
+                  property.value &&
                   property.key.name === 'requestPolicy' &&
                   property.value.value === 'network-only'
                 ) {
